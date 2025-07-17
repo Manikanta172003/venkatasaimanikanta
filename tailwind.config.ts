@@ -61,7 +61,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Futuristic neon colors
+				'neon-blue': 'hsl(var(--glow-primary))',
+				'neon-violet': 'hsl(var(--glow-secondary))',
+				'neon-cyan': 'hsl(var(--glow-accent))',
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
+			backdropBlur: {
+				'glass': '20px',
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-glow': 'var(--gradient-glow)',
+				'gradient-glass': 'var(--gradient-glass)',
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'glow-hover': 'var(--shadow-glow-hover)',
+				'glass': 'var(--shadow-glass)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +104,55 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
+				},
+				'pulseGlow': {
+					'0%': {
+						boxShadow: '0 0 20px hsl(var(--glow-primary) / 0.4)'
+					},
+					'100%': {
+						boxShadow: '0 0 40px hsl(var(--glow-primary) / 0.8)'
+					}
+				},
+				'slideInBlur': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(50px)',
+						filter: 'blur(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)',
+						filter: 'blur(0)'
+					}
+				},
+				'scaleInGlow': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.8)',
+						filter: 'blur(5px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)',
+						filter: 'blur(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-glow': 'pulseGlow 2s ease-in-out infinite alternate',
+				'slide-in-blur': 'slideInBlur 0.8s ease-out',
+				'scale-in-glow': 'scaleInGlow 0.6s ease-out',
 			}
 		}
 	},
