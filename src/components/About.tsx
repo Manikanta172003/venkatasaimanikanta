@@ -101,7 +101,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image Placeholder */}
           <div className="profile-image flex justify-center md:justify-start">
-            <div className="relative rounded-sm">
+            <div className="relative rounded-sm mx-[48px] my-[28px] px-[2px] py-[2px]">
               {/* Glowing ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-primary p-1 animate-pulse-glow">
                 <div className="w-full h-full rounded-full bg-background" />
