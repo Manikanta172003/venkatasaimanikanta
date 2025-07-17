@@ -1,7 +1,7 @@
+
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import profileImage from '@/assets/profile.jpg';
 
 // Import icons from lucide-react since phosphor-react might have different exports
 import { 
@@ -101,7 +101,7 @@ const About = () => {
     <section className="about-section py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Profile Image */}
+          {/* Profile Image Placeholder */}
           <div className="profile-image flex justify-center md:justify-start">
             <div className="relative">
               {/* Glowing ring */}
@@ -109,12 +109,10 @@ const About = () => {
                 <div className="w-full h-full rounded-full bg-background" />
               </div>
               
-              {/* Profile image */}
-              <img 
-                src={profileImage} 
-                alt="K. Venkata Sai Manikanta" 
-                className="relative z-10 w-80 h-80 rounded-full object-cover border-4 border-primary/20 hover:scale-105 transition-transform duration-500"
-              />
+              {/* Profile image placeholder */}
+              <div className="relative z-10 w-80 h-80 rounded-full bg-muted border-4 border-primary/20 hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+                <p className="text-muted-foreground text-lg">Upload your image</p>
+              </div>
               
               {/* Floating particles around image */}
               <div className="absolute inset-0 pointer-events-none">
