@@ -109,10 +109,12 @@ const About = () => {
                 <div className="w-full h-full rounded-full bg-background" />
               </div>
               
-              {/* Profile image placeholder */}
-              <div className="relative z-10 w-80 h-80 rounded-full bg-muted border-4 border-primary/20 hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-                <p className="text-muted-foreground text-lg">Upload your image</p>
-              </div>
+              {/* Profile image */}
+              <img 
+                src="/lovable-uploads/7dec3bda-d9d2-4b89-9787-6f246188fbf9.png" 
+                alt="K. Venkata Sai Manikanta" 
+                className="relative z-10 w-80 h-80 rounded-full object-cover border-4 border-primary/20 hover:scale-105 transition-transform duration-500"
+              />
               
               {/* Floating particles around image */}
               <div className="absolute inset-0 pointer-events-none">
