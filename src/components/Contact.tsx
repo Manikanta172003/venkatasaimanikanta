@@ -202,7 +202,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Me</h3>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://github.com/Manikanta172003"
                   className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
                 >
                   <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
