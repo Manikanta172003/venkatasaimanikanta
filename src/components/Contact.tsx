@@ -203,6 +203,8 @@ const Contact = () => {
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/Manikanta172003"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
                 >
                   <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
