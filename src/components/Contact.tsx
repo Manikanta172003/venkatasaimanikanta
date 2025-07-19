@@ -218,36 +218,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social links */}
-            <div className="social-links glass-card p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Me</h3>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/Manikanta172003"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
-                >
-                  <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
-                >
-                  <Linkedin className="w-6 h-6 text-foreground group-hover:text-secondary transition-colors" />
-                </a>
-                <a
-                  href="mailto:kambojimanikanta000@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
-                >
-                  <Mail className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
