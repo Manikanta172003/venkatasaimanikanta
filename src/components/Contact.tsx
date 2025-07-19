@@ -218,7 +218,9 @@ const Contact = () => {
                   <Linkedin className="w-6 h-6 text-foreground group-hover:text-secondary transition-colors" />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:kambojimanikanta000@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
                 >
                   <Mail className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
