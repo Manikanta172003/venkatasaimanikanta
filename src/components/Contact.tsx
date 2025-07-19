@@ -122,6 +122,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact form */}
           <div className="contact-form glass-card p-8 rounded-2xl">
+            <h3 className="text-xl font-semibold text-foreground mb-6">Contact me</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="form-input">
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
