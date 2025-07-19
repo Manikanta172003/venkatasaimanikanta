@@ -12,6 +12,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: ''
   });
 
@@ -103,7 +104,7 @@ const Contact = () => {
     console.log('Form submitted:', formData);
     
     // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   return (
@@ -152,6 +153,22 @@ const Contact = () => {
                   onChange={handleInputChange}
                   className="glass-card border-primary/20 focus:border-primary bg-transparent"
                   placeholder="your.email@example.com"
+                  required
+                />
+              </div>
+
+              <div className="form-input">
+                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  Subject
+                </label>
+                <Input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="glass-card border-primary/20 focus:border-primary bg-transparent"
+                  placeholder="What's this about?"
                   required
                 />
               </div>
