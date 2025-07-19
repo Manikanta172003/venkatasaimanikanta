@@ -152,7 +152,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  placeholder="your.email@example.com
+                  placeholder="your.email@example.com"
                   required
                 />
               </div>
