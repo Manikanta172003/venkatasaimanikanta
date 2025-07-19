@@ -210,7 +210,9 @@ const Contact = () => {
                   <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="social-icon glass-card p-4 rounded-xl hover:scale-110 transition-transform duration-300 group"
                 >
                   <Linkedin className="w-6 h-6 text-foreground group-hover:text-secondary transition-colors" />
