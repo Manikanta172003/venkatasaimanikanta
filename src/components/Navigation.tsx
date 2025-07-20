@@ -35,6 +35,13 @@ const Navigation = () => {
     );
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     
@@ -102,7 +109,10 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background">
+              <Button 
+                className="nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background"
+                onClick={scrollToContact}
+              >
                 Hire Me
               </Button>
             </div>
@@ -135,7 +145,10 @@ const Navigation = () => {
               ))}
               <Button 
                 className="mobile-nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background px-8 py-3 text-lg"
-                onClick={toggleMenu}
+                onClick={() => {
+                  scrollToContact();
+                  toggleMenu();
+                }}
               >
                 Hire Me
               </Button>

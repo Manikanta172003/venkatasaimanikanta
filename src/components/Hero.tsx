@@ -70,6 +70,23 @@ const Hero = () => {
     }
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const downloadResume = () => {
+    // Create a temporary link to download resume
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Assumes resume.pdf is in public folder
+    link.download = 'KV_Manikanta_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -126,6 +143,7 @@ const Hero = () => {
         <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
+            onClick={scrollToContact}
             className="neon-button px-8 py-6 text-lg font-medium bg-gradient-primary border-0 text-background hover:text-background"
           >
             Hire Me
@@ -137,6 +155,14 @@ const Hero = () => {
             className="glass-card px-8 py-6 text-lg font-medium border-primary/30 hover:border-primary"
           >
             View Projects
+          </Button>
+          <Button 
+            variant="secondary" 
+            size="lg"
+            onClick={downloadResume}
+            className="glass-card px-8 py-6 text-lg font-medium bg-secondary/20 hover:bg-secondary/30"
+          >
+            Download Resume
           </Button>
         </div>
       </div>
