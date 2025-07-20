@@ -99,7 +99,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="projects-section py-20 px-6">
+    <section id="projects" className="projects-section py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
         <div className="projects-title text-center mb-16">

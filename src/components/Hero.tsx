@@ -63,6 +63,13 @@ const Hero = () => {
 
   }, []);
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -126,6 +133,7 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
+            onClick={scrollToProjects}
             className="glass-card px-8 py-6 text-lg font-medium border-primary/30 hover:border-primary"
           >
             View Projects
