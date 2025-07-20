@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import emailjs from '@emailjs/browser';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -88,7 +89,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Animate submit button
@@ -100,11 +101,28 @@ const Contact = () => {
       ease: "power2.inOut"
     });
 
-    // Here you would typically handle form submission
-    console.log('Form submitted:', formData);
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_d3tsu1a', // Service ID
+        'template_o96owqs', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'M0GLBlQXksEuojx3W' // Public Key
+      );
+      
+      alert('Message sent successfully!');
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      alert('Failed to send message. Please try again.');
+    }
   };
 
   return (
