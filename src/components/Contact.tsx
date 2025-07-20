@@ -154,7 +154,6 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  placeholder="Your full name"
                   required
                 />
               </div>
@@ -170,7 +169,6 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  placeholder="your.email@example.com"
                   required
                 />
               </div>
@@ -186,7 +184,6 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  placeholder="What's this about?"
                   required
                 />
               </div>
@@ -201,7 +198,6 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="glass-card border-primary/20 focus:border-primary bg-transparent min-h-[120px]"
-                  placeholder="Tell me about your project..."
                   required
                 />
               </div>
