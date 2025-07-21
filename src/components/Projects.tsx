@@ -26,38 +26,6 @@ const projects = [
   },
   {
     id: 2,
-    title: "Railway Ticket Management",
-    description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/Railwayticketmanagement",
-    image: railwayManagementImg
-  },
-  {
-    id: 3,
-    title: "To Do List",
-    description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/ToDolsit",
-    image: todoListImg
-  },
-  {
-    id: 4,
-    title: "Bank Management System",
-    description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/Bankmangementsystem",
-    image: bankManagementImg
-  },
-  {
-    id: 5,
-    title: "Supermarket Billing",
-    description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/Super-market-billing",
-    image: supermarketBillingImg
-  },
-  {
-    id: 6,
     title: "Crypto Currency Price Prediction",
     description: "Machine learning model for predicting cryptocurrency prices using historical data and market analysis.",
     tech: ["Python", "numpy", "pandas", "matplotlib", "ML(XG boost)", "sklearn"],
@@ -65,12 +33,44 @@ const projects = [
     image: cryptoPredictionImg
   },
   {
-    id: 7,
+    id: 3,
     title: "Predicting Fake News Using ML",
     description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
     tech: ["Python", "ML(Logistic Regression)", "pandas", "numpy", "matplotlib", "TensorFlow"],
     github: "https://github.com/Manikanta172003/Predicting-fake-news-using-Machine-learning",
     image: fakeNewsDetectionImg
+  },
+  {
+    id: 4,
+    title: "Railway Ticket Management",
+    description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
+    tech: ["Python"],
+    github: "https://github.com/Manikanta172003/Railwayticketmanagement",
+    image: railwayManagementImg
+  },
+  {
+    id: 5,
+    title: "Bank Management System",
+    description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
+    tech: ["Python"],
+    github: "https://github.com/Manikanta172003/Bankmangementsystem",
+    image: bankManagementImg
+  },
+  {
+    id: 6,
+    title: "Supermarket Billing",
+    description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
+    tech: ["Python"],
+    github: "https://github.com/Manikanta172003/Super-market-billing",
+    image: supermarketBillingImg
+  },
+  {
+    id: 7,
+    title: "To Do List",
+    description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
+    tech: ["Python"],
+    github: "https://github.com/Manikanta172003/ToDolsit",
+    image: todoListImg
   }
 ];
 
