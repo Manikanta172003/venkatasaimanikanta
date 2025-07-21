@@ -78,13 +78,9 @@ const Hero = () => {
   };
 
   const downloadResume = () => {
-    // Create a temporary link to download resume
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Assumes resume.pdf is in public folder
-    link.download = 'KV_Manikanta_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open Google Drive direct download link
+    const driveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES';
+    window.open(driveDownloadUrl, '_blank');
   };
 
   return (
