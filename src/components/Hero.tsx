@@ -77,6 +77,12 @@ const Hero = () => {
     }
   };
 
+  const viewResume = () => {
+    // Open Google Drive view link
+    const driveViewUrl = 'https://drive.google.com/file/d/1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES/view';
+    window.open(driveViewUrl, '_blank');
+  };
+
   const downloadResume = () => {
     // Open Google Drive direct download link
     const driveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES';
@@ -139,10 +145,10 @@ const Hero = () => {
         <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
-            onClick={scrollToContact}
-            className="neon-button px-8 py-6 text-lg font-medium bg-gradient-primary border-0 text-background hover:text-background"
+            onClick={viewResume}
+            className="neon-button px-8 py-6 text-lg font-medium bg-gradient-primary border-0 text-background hover:text-background hover-scale"
           >
-            Hire Me
+            View Resume
           </Button>
           <Button 
             variant="outline" 
