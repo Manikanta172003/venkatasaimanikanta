@@ -9,45 +9,52 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    title: "Real-Time Stock Dashboard",
-    description: "Interactive dashboard displaying live stock prices with advanced analytics and predictions using Python and AWS.",
-    tech: ["Python", "AWS", "React", "WebSocket"],
-    image: "project-1"
+    title: "Real Time Stock Dashboard",
+    description: "Interactive dashboard displaying live stock prices with advanced analytics and real-time data visualization.",
+    tech: ["Python", "React", "WebSocket", "API"],
+    github: "https://github.com/Manikanta172003/real-time-stock-dashboard"
   },
   {
     id: 2,
-    title: "Fake News Detection",
-    description: "Machine learning model to detect fake news articles using NLP techniques and neural networks.",
-    tech: ["Python", "TensorFlow", "NLP", "Pandas"],
-    image: "project-2"
+    title: "Railway Ticket Management",
+    description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
+    tech: ["Java", "Database", "GUI", "Management"],
+    github: "https://github.com/Manikanta172003/Railwayticketmanagement"
   },
   {
     id: 3,
-    title: "Sentiment Analysis Engine",
-    description: "Advanced sentiment analysis tool for social media data with real-time processing capabilities.",
-    tech: ["Python", "NLTK", "MongoDB", "API"],
-    image: "project-3"
+    title: "To Do List",
+    description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
+    tech: ["JavaScript", "HTML", "CSS", "LocalStorage"],
+    github: "https://github.com/Manikanta172003/ToDolsit"
   },
   {
     id: 4,
-    title: "Cryptocurrency Price Prediction",
-    description: "AI-powered cryptocurrency price prediction system with time-series analysis and forecasting.",
-    tech: ["Python", "Scikit-learn", "Time Series", "API"],
-    image: "project-4"
+    title: "Bank Management System",
+    description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
+    tech: ["C++", "Database", "Security", "Management"],
+    github: "https://github.com/Manikanta172003/Bankmangementsystem"
   },
   {
     id: 5,
-    title: "EBook Audio Reader",
-    description: "Text-to-speech application that converts eBooks to audio with customizable voice settings.",
-    tech: ["Python", "TTS", "GUI", "Audio Processing"],
-    image: "project-5"
+    title: "Supermarket Billing",
+    description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
+    tech: ["Python", "GUI", "Database", "Billing"],
+    github: "https://github.com/Manikanta172003/Super-market-billing"
   },
   {
     id: 6,
-    title: "Bank Management System",
-    description: "Comprehensive banking system with secure transactions, user management, and real-time reporting.",
-    tech: ["C++", "SQL", "Database", "Security"],
-    image: "project-6"
+    title: "Crypto Currency Price Prediction",
+    description: "Machine learning model for predicting cryptocurrency prices using historical data and market analysis.",
+    tech: ["Python", "ML", "Data Analysis", "Prediction"],
+    github: "https://github.com/Manikanta172003/Crypto-currency"
+  },
+  {
+    id: 7,
+    title: "Predicting Fake News Using ML",
+    description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
+    tech: ["Python", "ML", "NLP", "Classification"],
+    github: "https://github.com/Manikanta172003/Predicting-fake-news-using-Machine-learning"
   }
 ];
 
@@ -155,18 +162,11 @@ const Projects = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 glass-card border-primary/30 hover:border-primary group/btn"
+                    className="w-full glass-card border-primary/30 hover:border-primary group/btn"
+                    onClick={() => window.open(project.github, '_blank')}
                   >
                     <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                    Code
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 glass-card border-secondary/30 hover:border-secondary group/btn"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                    Demo
+                    View Code
                   </Button>
                 </div>
               </div>
