@@ -20,7 +20,7 @@ const projects = [
     id: 1,
     title: "Real Time Stock Dashboard",
     description: "Interactive dashboard displaying live stock prices with advanced analytics and real-time data visualization.",
-    tech: ["Python", "React", "WebSocket", "API"],
+    tech: ["Python", "NumPy", "Pandas", "Tkinter", "yfinance", "Matplotlib", "Real-Time Data Processing", "Data Visualization", "Git & GitHub"],
     github: "https://github.com/Manikanta172003/real-time-stock-dashboard",
     image: stockDashboardImg
   },
@@ -28,7 +28,7 @@ const projects = [
     id: 2,
     title: "Railway Ticket Management",
     description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
-    tech: ["Java", "Database", "GUI", "Management"],
+    tech: ["Python"],
     github: "https://github.com/Manikanta172003/Railwayticketmanagement",
     image: railwayManagementImg
   },
@@ -36,7 +36,7 @@ const projects = [
     id: 3,
     title: "To Do List",
     description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
-    tech: ["JavaScript", "HTML", "CSS", "LocalStorage"],
+    tech: ["Python"],
     github: "https://github.com/Manikanta172003/ToDolsit",
     image: todoListImg
   },
@@ -44,7 +44,7 @@ const projects = [
     id: 4,
     title: "Bank Management System",
     description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
-    tech: ["C++", "Database", "Security", "Management"],
+    tech: ["Python"],
     github: "https://github.com/Manikanta172003/Bankmangementsystem",
     image: bankManagementImg
   },
@@ -52,7 +52,7 @@ const projects = [
     id: 5,
     title: "Supermarket Billing",
     description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
-    tech: ["Python", "GUI", "Database", "Billing"],
+    tech: ["Python"],
     github: "https://github.com/Manikanta172003/Super-market-billing",
     image: supermarketBillingImg
   },
@@ -60,7 +60,7 @@ const projects = [
     id: 6,
     title: "Crypto Currency Price Prediction",
     description: "Machine learning model for predicting cryptocurrency prices using historical data and market analysis.",
-    tech: ["Python", "ML", "Data Analysis", "Prediction"],
+    tech: ["Python", "numpy", "pandas", "matplotlib", "ML(XG boost)", "sklearn"],
     github: "https://github.com/Manikanta172003/Crypto-currency",
     image: cryptoPredictionImg
   },
@@ -68,7 +68,7 @@ const projects = [
     id: 7,
     title: "Predicting Fake News Using ML",
     description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
-    tech: ["Python", "ML", "NLP", "Classification"],
+    tech: ["Python", "ML(Logistic Regression)", "pandas", "numpy", "matplotlib", "TensorFlow"],
     github: "https://github.com/Manikanta172003/Predicting-fake-news-using-Machine-learning",
     image: fakeNewsDetectionImg
   }
