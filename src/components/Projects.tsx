@@ -2,7 +2,16 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
+
+// Import project images
+import stockDashboardImg from '@/assets/project-stock-dashboard.jpg';
+import railwayManagementImg from '@/assets/project-railway-management.jpg';
+import todoListImg from '@/assets/project-todo-list.jpg';
+import bankManagementImg from '@/assets/project-bank-management.jpg';
+import supermarketBillingImg from '@/assets/project-supermarket-billing.jpg';
+import cryptoPredictionImg from '@/assets/project-crypto-prediction.jpg';
+import fakeNewsDetectionImg from '@/assets/project-fake-news-detection.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,49 +21,56 @@ const projects = [
     title: "Real Time Stock Dashboard",
     description: "Interactive dashboard displaying live stock prices with advanced analytics and real-time data visualization.",
     tech: ["Python", "React", "WebSocket", "API"],
-    github: "https://github.com/Manikanta172003/real-time-stock-dashboard"
+    github: "https://github.com/Manikanta172003/real-time-stock-dashboard",
+    image: stockDashboardImg
   },
   {
     id: 2,
     title: "Railway Ticket Management",
     description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
     tech: ["Java", "Database", "GUI", "Management"],
-    github: "https://github.com/Manikanta172003/Railwayticketmanagement"
+    github: "https://github.com/Manikanta172003/Railwayticketmanagement",
+    image: railwayManagementImg
   },
   {
     id: 3,
     title: "To Do List",
     description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
     tech: ["JavaScript", "HTML", "CSS", "LocalStorage"],
-    github: "https://github.com/Manikanta172003/ToDolsit"
+    github: "https://github.com/Manikanta172003/ToDolsit",
+    image: todoListImg
   },
   {
     id: 4,
     title: "Bank Management System",
     description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
     tech: ["C++", "Database", "Security", "Management"],
-    github: "https://github.com/Manikanta172003/Bankmangementsystem"
+    github: "https://github.com/Manikanta172003/Bankmangementsystem",
+    image: bankManagementImg
   },
   {
     id: 5,
     title: "Supermarket Billing",
     description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
     tech: ["Python", "GUI", "Database", "Billing"],
-    github: "https://github.com/Manikanta172003/Super-market-billing"
+    github: "https://github.com/Manikanta172003/Super-market-billing",
+    image: supermarketBillingImg
   },
   {
     id: 6,
     title: "Crypto Currency Price Prediction",
     description: "Machine learning model for predicting cryptocurrency prices using historical data and market analysis.",
     tech: ["Python", "ML", "Data Analysis", "Prediction"],
-    github: "https://github.com/Manikanta172003/Crypto-currency"
+    github: "https://github.com/Manikanta172003/Crypto-currency",
+    image: cryptoPredictionImg
   },
   {
     id: 7,
     title: "Predicting Fake News Using ML",
     description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
     tech: ["Python", "ML", "NLP", "Classification"],
-    github: "https://github.com/Manikanta172003/Predicting-fake-news-using-Machine-learning"
+    github: "https://github.com/Manikanta172003/Predicting-fake-news-using-Machine-learning",
+    image: fakeNewsDetectionImg
   }
 ];
 
@@ -125,14 +141,14 @@ const Projects = () => {
               key={project.id}
               className="project-card glass-card p-6 rounded-2xl group cursor-pointer"
             >
-              {/* Project image placeholder */}
-              <div className="w-full h-48 bg-gradient-primary rounded-xl mb-6 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-white/20">
-                    {project.id}
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+              {/* Project image */}
+              <div className="w-full h-48 rounded-xl mb-6 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
 
               {/* Project content */}
