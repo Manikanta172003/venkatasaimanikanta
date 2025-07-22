@@ -85,14 +85,14 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Enhanced Background */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
           alt="Futuristic background" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-card/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-card/90" />
       </div>
 
       {/* Spline 3D Background */}
@@ -106,41 +106,42 @@ const Hero = () => {
         />
       </div>
 
-      {/* Floating orbs */}
+      {/* Enhanced Floating orbs */}
       <div className="absolute inset-0 z-20 pointer-events-none">
-        <div className="floating-orb absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-primary rounded-full opacity-20 blur-xl" />
-        <div className="floating-orb absolute top-3/4 right-1/4 w-24 h-24 bg-gradient-primary rounded-full opacity-30 blur-lg" />
-        <div className="floating-orb absolute top-1/2 right-1/3 w-16 h-16 bg-secondary rounded-full opacity-25 blur-md" />
+        <div className="floating-orb absolute top-1/4 left-1/4 w-40 h-40 bg-gradient-primary rounded-full opacity-20 blur-xl float-gentle" />
+        <div className="floating-orb absolute top-3/4 right-1/4 w-32 h-32 bg-gradient-secondary rounded-full opacity-25 blur-lg float-delayed" />
+        <div className="floating-orb absolute top-1/2 right-1/3 w-24 h-24 bg-gradient-accent rounded-full opacity-30 blur-md float-slow" />
+        <div className="floating-orb absolute top-1/3 left-1/2 w-20 h-20 bg-gradient-rainbow rounded-full opacity-20 blur-lg animate-pulse-glow" />
       </div>
 
-      {/* Hero content */}
-      <div className="relative z-30 text-center px-6 max-w-4xl mx-auto">
-        <div className="hero-title mb-6">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+      {/* Enhanced Hero content */}
+      <div className="relative z-30 text-center px-6 max-w-5xl mx-auto">
+        <div className="hero-title mb-8">
+          <h1 className="heading-primary text-6xl md:text-8xl lg:text-9xl mb-6 font-poppins">
             Hi, I'm{' '}
-            <span className="gradient-text">
+            <span className="gradient-text-rainbow block md:inline">
               K. Venkata Sai Manikanta
             </span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light text-foreground/80">
+          <h2 className="heading-secondary text-3xl md:text-4xl font-light text-foreground/90 font-inter">
             Software Developer
           </h2>
         </div>
 
-        <div className="hero-subtitle mb-8">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <div className="hero-subtitle mb-10">
+          <p className="text-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Transforming data into intelligent solutions with expertise in 
-            <span className="text-primary"> Python</span>,
-            <span className="text-secondary"> AWS</span>, and
-            <span className="text-accent"> DevOps</span>
+            <span className="text-primary font-semibold"> Python</span>,
+            <span className="text-secondary font-semibold"> AWS</span>, and
+            <span className="text-accent font-semibold"> DevOps</span>
           </p>
         </div>
 
-        <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="hero-cta flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button 
             size="lg" 
             onClick={viewResume}
-            className="neon-button px-8 py-6 text-lg font-medium bg-gradient-primary border-0 text-background hover:text-background hover-scale"
+            className="neon-button px-10 py-7 text-xl font-semibold bg-gradient-primary border-0 text-background hover:text-background hover-scale-lg shadow-glow-primary"
           >
             View Resume
           </Button>
@@ -148,7 +149,7 @@ const Hero = () => {
             variant="outline" 
             size="lg"
             onClick={scrollToProjects}
-            className="glass-card px-8 py-6 text-lg font-medium border-primary/30 hover:border-primary"
+            className="glass-card px-10 py-7 text-xl font-medium border-primary/40 hover:border-primary/80 hover-scale"
           >
             View Projects
           </Button>
@@ -156,17 +157,17 @@ const Hero = () => {
             variant="secondary" 
             size="lg"
             onClick={scrollToContact}
-            className="glass-card px-8 py-6 text-lg font-medium bg-secondary/20 hover:bg-secondary/30"
+            className="neon-button-secondary px-10 py-7 text-xl font-medium border-0 text-background hover:text-background hover-scale"
           >
             Hire Me
           </Button>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Enhanced Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce" />
+        <div className="w-8 h-12 border-2 border-primary/60 rounded-full flex justify-center glass-card">
+          <div className="w-2 h-4 bg-gradient-primary rounded-full mt-3 animate-bounce" />
         </div>
       </div>
     </section>

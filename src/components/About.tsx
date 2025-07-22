@@ -133,17 +133,17 @@ const About = () => {
           <div className="space-y-8">
             {/* Bio */}
             <div className="bio-text">
-              <h2 className="text-4xl font-bold mb-6 gradient-text">
+              <h2 className="heading-primary text-5xl md:text-6xl font-bold mb-8 gradient-text-rainbow font-poppins">
                 About Me
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="text-body text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8 font-inter">
                 Passionate Computer Science graduate with expertise in{' '}
-                <span className="text-primary font-medium">Python</span>,{' '}
-                <span className="text-secondary font-medium">SQL</span>,{' '}
-                <span className="text-accent font-medium">AWS</span>, and{' '}
-                <span className="text-primary font-medium">DevOps</span>.
+                <span className="text-primary font-semibold">Python</span>,{' '}
+                <span className="text-secondary font-semibold">SQL</span>,{' '}
+                <span className="text-accent font-semibold">AWS</span>, and{' '}
+                <span className="text-primary font-semibold">DevOps</span>.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-body text-xl md:text-2xl text-muted-foreground leading-relaxed font-inter">
                 Experienced in building real-time dashboards, automating pipelines, 
                 and creating scalable cloud-native applications. I transform complex 
                 data into actionable insights and love crafting elegant solutions 
@@ -151,18 +151,27 @@ const About = () => {
               </p>
             </div>
 
-            {/* Skills Grid */}
+            {/* Enhanced Skills Grid */}
             <div className="skills-grid">
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">
+              <h3 className="heading-secondary text-3xl md:text-4xl font-semibold mb-8 text-foreground font-poppins">
                 Technical Skills
               </h3>
-              <div className="grid grid-cols-4 gap-6">
-                {skills.map((skill, index) => <div key={skill.name} className="skill-item glass-card p-4 rounded-xl text-center group cursor-pointer">
-                    <skill.icon size={40} className={`${skill.color} mx-auto mb-2 skill-icon group-hover:scale-110 transition-transform duration-300`} />
-                    <p className="text-sm font-medium text-foreground/80 group-hover:text-foreground transition-colors">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+                {skills.map((skill, index) => (
+                  <div 
+                    key={skill.name} 
+                    className="skill-item skill-card glass-card p-6 rounded-2xl text-center group cursor-pointer hover-scale"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <skill.icon 
+                      size={50} 
+                      className={`${skill.color} mx-auto mb-4 skill-icon group-hover:scale-125 transition-all duration-500`} 
+                    />
+                    <p className="text-sm md:text-base font-semibold text-foreground/90 group-hover:text-foreground transition-colors font-inter">
                       {skill.name}
                     </p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

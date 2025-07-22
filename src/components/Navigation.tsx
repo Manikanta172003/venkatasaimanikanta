@@ -84,51 +84,52 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-card backdrop-blur-glass' : 'bg-transparent'
+      {/* Enhanced Desktop Navigation */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? 'nav-glass scrolled backdrop-blur-strong' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* Enhanced Logo */}
             <div className="nav-item">
-              <h1 className="text-2xl font-bold gradient-text">
+              <h1 className="heading-secondary text-3xl font-bold gradient-text-rainbow font-poppins">
                 KV.Manikanta
               </h1>
             </div>
 
-            {/* Menu Button - Now for all screen sizes */}
+            {/* Enhanced Menu Button */}
             <button
               onClick={toggleMenu}
-              className="nav-item glass-card p-3 rounded-lg hover:bg-primary/10 transition-colors group"
+              className="nav-item glass-card p-4 rounded-xl hover:bg-primary/10 transition-all duration-300 group border border-primary/20 hover:border-primary/50"
             >
               {isOpen ? (
-                <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+                <X className="w-7 h-7 text-primary group-hover:rotate-90 transition-transform duration-300" />
               ) : (
-                <Menu className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                <Menu className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300" />
               )}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Menu Overlay - Now for all screen sizes */}
+      {/* Enhanced Menu Overlay */}
       {isOpen && (
         <div className="mobile-menu fixed inset-0 z-40">
-          <div className="absolute inset-0 bg-background/95 backdrop-blur-glass">
-            <div className="flex flex-col items-center justify-center h-full space-y-8">
-              {navItems.map((item) => (
+          <div className="absolute inset-0 bg-background/98 backdrop-blur-strong">
+            <div className="flex flex-col items-center justify-center h-full space-y-10">
+              {navItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={toggleMenu}
-                  className="mobile-nav-item text-2xl font-medium text-foreground hover:text-primary transition-colors duration-300"
+                  className="mobile-nav-item heading-secondary text-3xl md:text-4xl font-semibold text-foreground hover:text-primary transition-all duration-500 hover:scale-110 font-poppins"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
                 </a>
               ))}
               <Button 
-                className="mobile-nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background px-8 py-3 text-lg"
+                className="mobile-nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background px-12 py-6 text-xl font-semibold hover-scale-lg shadow-glow-primary mt-8"
                 onClick={() => {
                   downloadResume();
                   toggleMenu();

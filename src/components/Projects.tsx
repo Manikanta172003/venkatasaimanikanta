@@ -125,11 +125,11 @@ const Projects = () => {
     <section id="projects" className="projects-section py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
-        <div className="projects-title text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+        <div className="projects-title text-center mb-20">
+          <h2 className="heading-primary text-5xl md:text-6xl font-bold gradient-text-rainbow mb-6 font-poppins">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter">
             Showcasing innovative solutions and technical expertise across various domains
           </p>
         </div>
