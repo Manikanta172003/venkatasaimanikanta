@@ -2,20 +2,24 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Import icons from lucide-react since phosphor-react might have different exports
-import { Code2, Database, Cloud, Settings, BarChart3, GitBranch, Cpu, Code } from 'lucide-react';
+// Import icons from lucide-react
+import { Code2, Database, Cloud, GitBranch, Settings, BarChart3, PieChart, Monitor, FileText } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 const skills = [{
   name: 'Python',
   icon: Code2,
   color: 'text-yellow-400'
 }, {
+  name: 'Data Analytics',
+  icon: BarChart3,
+  color: 'text-cyan-400'
+}, {
   name: 'SQL',
   icon: Database,
   color: 'text-blue-400'
 }, {
-  name: 'C/C++',
-  icon: Code,
+  name: 'Data Visualization',
+  icon: PieChart,
   color: 'text-green-400'
 }, {
   name: 'AWS',
@@ -23,20 +27,24 @@ const skills = [{
   color: 'text-orange-400'
 }, {
   name: 'Power BI',
-  icon: BarChart3,
+  icon: Monitor,
   color: 'text-yellow-500'
-}, {
-  name: 'Git',
-  icon: GitBranch,
-  color: 'text-red-400'
 }, {
   name: 'DevOps',
   icon: Settings,
   color: 'text-purple-400'
 }, {
-  name: 'Data Analytics',
-  icon: Cpu,
-  color: 'text-cyan-400'
+  name: 'Git',
+  icon: GitBranch,
+  color: 'text-red-400'
+}, {
+  name: 'HTML5',
+  icon: FileText,
+  color: 'text-orange-500'
+}, {
+  name: 'CSS',
+  icon: FileText,
+  color: 'text-blue-500'
 }];
 const About = () => {
   useEffect(() => {
