@@ -117,7 +117,7 @@ const Hero = () => {
       {/* Enhanced Hero content */}
       <div className="relative z-30 text-center px-6 max-w-5xl mx-auto">
         <div className="hero-title mb-8">
-          <h1 className="heading-primary text-6xl md:text-8xl lg:text-9xl mb-6 font-poppins">
+          <h1 className="heading-primary text-4xl md:text-6xl lg:text-7xl mb-6 font-poppins">
             Hi, I'm{' '}
             <span className="gradient-text-rainbow block md:inline">
               K. Venkata Sai Manikanta
