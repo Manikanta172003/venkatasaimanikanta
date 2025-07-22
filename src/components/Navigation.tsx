@@ -35,11 +35,10 @@ const Navigation = () => {
     );
   }, []);
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const downloadResume = () => {
+    // Open Google Drive direct download link
+    const driveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES';
+    window.open(driveDownloadUrl, '_blank');
   };
 
   const toggleMenu = () => {
@@ -111,9 +110,9 @@ const Navigation = () => {
               ))}
               <Button 
                 className="nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background"
-                onClick={scrollToContact}
+                onClick={downloadResume}
               >
-                Hire Me
+                Download Resume
               </Button>
             </div>
 
@@ -146,11 +145,11 @@ const Navigation = () => {
               <Button 
                 className="mobile-nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background px-8 py-3 text-lg"
                 onClick={() => {
-                  scrollToContact();
+                  downloadResume();
                   toggleMenu();
                 }}
               >
-                Hire Me
+                Download Resume
               </Button>
             </div>
           </div>
