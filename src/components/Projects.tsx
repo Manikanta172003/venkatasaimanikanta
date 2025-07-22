@@ -190,15 +190,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* View more button */}
-        <div className="text-center mt-12">
-          <Button 
-            size="lg"
-            className="neon-button px-8 py-6 text-lg bg-gradient-primary border-0 text-background hover:text-background"
-          >
-            View All Projects
-          </Button>
-        </div>
       </div>
     </section>
   );
