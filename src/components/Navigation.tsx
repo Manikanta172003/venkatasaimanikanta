@@ -97,39 +97,24 @@ const Navigation = () => {
               </h1>
             </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="nav-item text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
-                >
-                  {item.name}
-                </a>
-              ))}
-              <Button 
-                className="nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background"
-                onClick={downloadResume}
-              >
-                Download Resume
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
+            {/* Menu Button - Now for all screen sizes */}
             <button
               onClick={toggleMenu}
-              className="md:hidden nav-item glass-card p-2 rounded-lg"
+              className="nav-item glass-card p-3 rounded-lg hover:bg-primary/10 transition-colors group"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+              ) : (
+                <Menu className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+              )}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Menu Overlay - Now for all screen sizes */}
       {isOpen && (
-        <div className="mobile-menu fixed inset-0 z-40 md:hidden">
+        <div className="mobile-menu fixed inset-0 z-40">
           <div className="absolute inset-0 bg-background/95 backdrop-blur-glass">
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navItems.map((item) => (
