@@ -164,12 +164,20 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Enhanced Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="w-8 h-12 border-2 border-primary/60 rounded-full flex justify-center glass-card">
-          <div className="w-2 h-4 bg-gradient-primary rounded-full mt-3 animate-bounce" />
+      {/* Working Scroll Button */}
+      <button 
+        onClick={() => {
+          const aboutSection = document.getElementById('about');
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 glass-card p-4 rounded-full hover:bg-primary/10 transition-all duration-300 group"
+      >
+        <div className="w-6 h-6 border-2 border-primary rounded-full flex items-center justify-center">
+          <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
         </div>
-      </div>
+      </button>
     </section>
   );
 };
