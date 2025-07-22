@@ -83,12 +83,6 @@ const Hero = () => {
     window.open(driveViewUrl, '_blank');
   };
 
-  const downloadResume = () => {
-    // Open Google Drive direct download link
-    const driveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES';
-    window.open(driveDownloadUrl, '_blank');
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -161,10 +155,10 @@ const Hero = () => {
           <Button 
             variant="secondary" 
             size="lg"
-            onClick={downloadResume}
+            onClick={scrollToContact}
             className="glass-card px-8 py-6 text-lg font-medium bg-secondary/20 hover:bg-secondary/30"
           >
-            Download Resume
+            Hire Me
           </Button>
         </div>
       </div>
