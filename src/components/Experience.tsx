@@ -160,6 +160,31 @@ const Experience = () => {
                 </div>
               </div>
 
+              {/* Project link */}
+              <div className="mt-8 pt-8 border-t border-primary/20">
+                <h5 className="text-lg font-semibold text-foreground mb-4 font-poppins">
+                  Project Delivered
+                </h5>
+                <div className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:bg-primary/5 transition-all duration-300">
+                  <TrendingUp className="w-6 h-6 text-primary" />
+                  <div>
+                    <h6 className="font-semibold text-foreground">Enhanced Cryptocurrency Price Prediction</h6>
+                    <p className="text-sm text-muted-foreground">XGBoost Algorithm with Comparative Analysis</p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      const projectsSection = document.getElementById('projects');
+                      if (projectsSection) {
+                        projectsSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="ml-auto px-4 py-2 text-sm font-medium text-primary border border-primary/30 rounded-lg hover:bg-primary/10 transition-colors"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+
               {/* Skills gained section */}
               <div className="mt-8 pt-8 border-t border-primary/20">
                 <h5 className="text-lg font-semibold text-foreground mb-4 font-poppins">

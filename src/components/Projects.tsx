@@ -26,6 +26,15 @@ const projects = [
   },
   {
     id: 2,
+    title: "Enhanced Cryptocurrency Price Prediction Using XGBoost Algorithm in Machine Learning: A Comparative Analysis",
+    description: "Advanced machine learning model developed during internship at Shiash Info Solutions using XGBoost algorithm with GridSearchCV optimization and comprehensive feature engineering for enhanced cryptocurrency price forecasting.",
+    tech: ["Python", "XGBoost", "GridSearchCV", "Feature Engineering", "Machine Learning", "Data Analysis", "Model Evaluation", "Pandas", "NumPy", "Scikit-learn"],
+    github: "https://github.com/Manikanta172003/Crypto-currency",
+    image: cryptoPredictionImg,
+    featured: true
+  },
+  {
+    id: 3,
     title: "Crypto Currency Price Prediction",
     description: "Machine learning model for predicting cryptocurrency prices using historical data and market analysis.",
     tech: ["Python", "numpy", "pandas", "matplotlib", "ML(XG boost)", "sklearn"],
@@ -33,7 +42,7 @@ const projects = [
     image: cryptoPredictionImg
   },
   {
-    id: 3,
+    id: 4,
     title: "Predicting Fake News Using ML",
     description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
     tech: ["Python", "ML(Logistic Regression)", "pandas", "numpy", "matplotlib", "TensorFlow"],
@@ -41,7 +50,7 @@ const projects = [
     image: fakeNewsDetectionImg
   },
   {
-    id: 4,
+    id: 5,
     title: "Railway Ticket Management",
     description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
     tech: ["Python"],
@@ -49,7 +58,7 @@ const projects = [
     image: railwayManagementImg
   },
   {
-    id: 5,
+    id: 6,
     title: "Bank Management System",
     description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
     tech: ["Python"],
@@ -57,7 +66,7 @@ const projects = [
     image: bankManagementImg
   },
   {
-    id: 6,
+    id: 7,
     title: "Supermarket Billing",
     description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
     tech: ["Python"],
@@ -65,7 +74,7 @@ const projects = [
     image: supermarketBillingImg
   },
   {
-    id: 7,
+    id: 8,
     title: "To Do List",
     description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
     tech: ["Python"],
@@ -139,7 +148,9 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="project-card glass-card p-6 rounded-2xl group cursor-pointer"
+              className={`project-card glass-card p-6 rounded-2xl group cursor-pointer ${
+                project.featured ? 'ring-2 ring-primary/50 bg-gradient-to-br from-primary/5 to-transparent' : ''
+              }`}
             >
               {/* Project image */}
               <div className="w-full h-48 rounded-xl mb-6 relative overflow-hidden">
@@ -153,9 +164,16 @@ const Projects = () => {
 
               {/* Project content */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  {project.featured && (
+                    <span className="px-2 py-1 text-xs font-medium bg-primary text-background rounded-full">
+                      Internship
+                    </span>
+                  )}
+                </div>
                 
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {project.description}
