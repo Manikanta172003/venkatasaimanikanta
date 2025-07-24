@@ -129,7 +129,8 @@ const Navigation = () => {
                 </a>
               ))}
               <Button 
-                className="mobile-nav-item neon-button bg-gradient-primary border-0 text-background hover:text-background px-12 py-6 text-xl font-semibold hover-scale-lg shadow-glow-primary mt-8"
+                variant="outline"
+                className="mobile-nav-item glass-card px-12 py-6 text-xl font-medium border-primary/40 hover:border-primary/80 hover-scale mt-8"
                 onClick={() => {
                   downloadResume();
                   toggleMenu();
