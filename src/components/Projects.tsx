@@ -19,15 +19,15 @@ const projects = [
   {
     id: 1,
     title: "Real Time Stock Dashboard",
-    description: "Interactive dashboard displaying live stock prices with advanced analytics and real-time data visualization.",
-    tech: ["Python", "NumPy", "Pandas", "Tkinter", "yfinance", "Matplotlib", "Real-Time Data Processing", "Data Visualization", "Git & GitHub"],
+    description: "Professional-grade financial analytics platform featuring live market data integration, advanced technical indicators, and interactive visualizations. Built with real-time data processing capabilities and comprehensive portfolio analysis tools.",
+    tech: ["Python", "NumPy", "Pandas", "Tkinter", "yfinance API", "Matplotlib", "Real-Time Processing", "Financial Analytics", "Data Visualization", "Git"],
     github: "https://github.com/Manikanta172003/real-time-stock-dashboard",
     image: stockDashboardImg
   },
   {
     id: 2,
     title: "Enhanced Cryptocurrency Price Prediction Using XGBoost Algorithm in Machine Learning: A Comparative Analysis",
-    description: "Advanced machine learning model developed during internship at Shiash Info Solutions using XGBoost algorithm with GridSearchCV optimization and comprehensive feature engineering for enhanced cryptocurrency price forecasting.",
+    description: "Enterprise-level cryptocurrency price forecasting system developed during professional internship. Features advanced XGBoost algorithms, hyperparameter optimization with GridSearchCV, and comprehensive feature engineering for superior prediction accuracy.",
     tech: ["Python", "XGBoost", "GridSearchCV", "Feature Engineering", "Machine Learning", "Data Analysis", "Model Evaluation", "Pandas", "NumPy", "Scikit-learn"],
     github: "https://github.com/Manikanta172003/Crypto-currency",
     image: cryptoPredictionImg,
@@ -35,43 +35,19 @@ const projects = [
   },
   {
     id: 3,
-    title: "Predicting Fake News Using ML",
-    description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
-    tech: ["Python", "ML(Logistic Regression)", "pandas", "numpy", "matplotlib", "TensorFlow"],
+    title: "Predicting Fake News Using Machine Learning",
+    description: "Intelligent news verification system using advanced NLP techniques and machine learning algorithms. Implements logistic regression with TensorFlow for accurate classification of misinformation, contributing to digital media literacy and information integrity.",
+    tech: ["Python", "Machine Learning", "Logistic Regression", "Natural Language Processing", "Pandas", "NumPy", "Matplotlib", "TensorFlow", "Text Analytics"],
     github: "https://github.com/Manikanta172003/Predicting-fake-news-using-Machine-learning",
     image: fakeNewsDetectionImg
   },
   {
     id: 4,
-    title: "Railway Ticket Management",
-    description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
-    tech: ["Python"],
+    title: "Railway Ticket Management System",
+    description: "Comprehensive transportation management platform with secure user authentication, real-time booking capabilities, and automated ticket processing. Features robust database management and scalable architecture for high-volume transactions.",
+    tech: ["Python", "Database Management", "User Authentication", "System Architecture", "Data Processing", "Security Implementation"],
     github: "https://github.com/Manikanta172003/Railwayticketmanagement",
     image: railwayManagementImg
-  },
-  {
-    id: 5,
-    title: "Bank Management System",
-    description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/Bankmangementsystem",
-    image: bankManagementImg
-  },
-  {
-    id: 6,
-    title: "Supermarket Billing",
-    description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/Super-market-billing",
-    image: supermarketBillingImg
-  },
-  {
-    id: 7,
-    title: "To Do List",
-    description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
-    tech: ["Python"],
-    github: "https://github.com/Manikanta172003/ToDolsit",
-    image: todoListImg
   }
 ];
 
@@ -131,12 +107,12 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter">
-            Showcasing innovative solutions and technical expertise across various domains
+            Showcasing professional-grade solutions with advanced technical implementations and real-world impact
           </p>
         </div>
 
         {/* Projects grid */}
-        <div className="projects-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="projects-grid grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project) => (
             <div
               key={project.id}
