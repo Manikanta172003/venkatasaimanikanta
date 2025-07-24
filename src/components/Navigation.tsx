@@ -128,16 +128,15 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button 
-                variant="outline"
-                className="mobile-nav-item glass-card px-12 py-6 text-xl font-medium border-primary/40 hover:border-primary/80 hover-scale mt-8"
+              <button 
+                className="mobile-nav-item heading-secondary text-3xl md:text-4xl font-semibold text-foreground hover:text-primary transition-all duration-500 hover:scale-110 font-poppins"
                 onClick={() => {
                   downloadResume();
                   toggleMenu();
                 }}
               >
                 Download Resume
-              </Button>
+              </button>
             </div>
           </div>
         </div>
