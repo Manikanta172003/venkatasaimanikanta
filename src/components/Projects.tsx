@@ -35,14 +35,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "Crypto Currency Price Prediction",
-    description: "Machine learning model for predicting cryptocurrency prices using historical data and market analysis.",
-    tech: ["Python", "numpy", "pandas", "matplotlib", "ML(XG boost)", "sklearn"],
-    github: "https://github.com/Manikanta172003/Crypto-currency",
-    image: cryptoPredictionImg
-  },
-  {
-    id: 4,
     title: "Predicting Fake News Using ML",
     description: "Machine learning application to detect and classify fake news articles using NLP and classification algorithms.",
     tech: ["Python", "ML(Logistic Regression)", "pandas", "numpy", "matplotlib", "TensorFlow"],
@@ -50,7 +42,7 @@ const projects = [
     image: fakeNewsDetectionImg
   },
   {
-    id: 5,
+    id: 4,
     title: "Railway Ticket Management",
     description: "Comprehensive railway ticket booking and management system with user authentication and booking tracking.",
     tech: ["Python"],
@@ -58,7 +50,7 @@ const projects = [
     image: railwayManagementImg
   },
   {
-    id: 6,
+    id: 5,
     title: "Bank Management System",
     description: "Secure banking system with transaction management, account handling, and comprehensive reporting features.",
     tech: ["Python"],
@@ -66,7 +58,7 @@ const projects = [
     image: bankManagementImg
   },
   {
-    id: 7,
+    id: 6,
     title: "Supermarket Billing",
     description: "Point-of-sale system for supermarket billing with inventory management and receipt generation.",
     tech: ["Python"],
@@ -74,7 +66,7 @@ const projects = [
     image: supermarketBillingImg
   },
   {
-    id: 8,
+    id: 7,
     title: "To Do List",
     description: "Feature-rich task management application with priority settings, deadlines, and progress tracking.",
     tech: ["Python"],
