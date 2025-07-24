@@ -37,7 +37,7 @@ const Navigation = () => {
 
   const downloadResume = () => {
     // Open Google Drive direct download link
-    const driveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES';
+    const driveDownloadUrl = 'https://drive.google.com/file/d/1Bz4PHDNct_mxItXqBlR1s1gda9cFqsZ2/view?usp=sharing';
     window.open(driveDownloadUrl, '_blank');
   };
 

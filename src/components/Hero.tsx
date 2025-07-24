@@ -79,7 +79,7 @@ const Hero = () => {
 
   const viewResume = () => {
     // Open Google Drive view link
-    const driveViewUrl = 'https://drive.google.com/file/d/1XyWhtZ8AoTEOOEzMYQcSGNneRn-4XrES/view';
+    const driveViewUrl = 'https://drive.google.com/file/d/1Bz4PHDNct_mxItXqBlR1s1gda9cFqsZ2/view?usp=sharing';
     window.open(driveViewUrl, '_blank');
   };
 
