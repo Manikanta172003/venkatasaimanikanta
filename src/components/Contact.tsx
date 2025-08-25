@@ -129,7 +129,7 @@ const Contact = () => {
 
   return (
     <section className="contact-section py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Section title */}
         <div className="contact-title text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
@@ -140,10 +140,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Form */}
-          <div className="contact-form glass-card p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Contact me</h3>
+        {/* Centered Contact Form */}
+        <div className="flex justify-center mb-16">
+          <div className="contact-form glass-card p-8 rounded-2xl w-full max-w-2xl">
+            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Contact me</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="form-input">
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -213,70 +213,51 @@ const Contact = () => {
               </Button>
             </form>
           </div>
+        </div>
 
-          {/* Social Icons & Info */}
-          <div className="space-y-8">
-            {/* Social Icons */}
-            <div className="social-icons flex justify-center lg:justify-start gap-6">
-              <a 
-                href="https://github.com/Manikanta172003" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-icon group"
-              >
-                <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
-                  <Github className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-                </div>
-              </a>
-
-              <a 
-                href="https://www.linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-icon group"
-              >
-                <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
-                  <Linkedin className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-                </div>
-              </a>
-
-              <a 
-                href="mailto:kambojimanikanta000@gmail.com"
-                className="social-icon group"
-              >
-                <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
-                  <Mail className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-                </div>
-              </a>
-
-              <a 
-                href="tel:+917993590886"
-                className="social-icon group"
-              >
-                <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
-                  <Phone className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-                </div>
-              </a>
-            </div>
-
-            {/* Contact Info */}
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Let's Connect</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">kambojimanikanta000@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">+91 7993590886</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-5 h-5 rounded-full bg-primary animate-pulse" />
-                  <span className="text-muted-foreground">Available for opportunities</span>
-                </div>
+        {/* Social Icons Section */}
+        <div className="text-center">
+          <h3 className="text-xl font-semibold text-foreground mb-8">Let's Connect</h3>
+          <div className="social-icons flex justify-center gap-6">
+            <a 
+              href="https://github.com/Manikanta172003" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon group"
+            >
+              <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+                <Github className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
               </div>
-            </div>
+            </a>
+
+            <a 
+              href="https://www.linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon group"
+            >
+              <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+                <Linkedin className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+              </div>
+            </a>
+
+            <a 
+              href="mailto:kambojimanikanta000@gmail.com"
+              className="social-icon group"
+            >
+              <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+                <Mail className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+              </div>
+            </a>
+
+            <a 
+              href="tel:+917993590886"
+              className="social-icon group"
+            >
+              <div className="glass-card p-4 rounded-xl hover:scale-110 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+                <Phone className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+              </div>
+            </a>
           </div>
         </div>
       </div>
