@@ -1,22 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import emailjs from '@emailjs/browser';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
   useEffect(() => {
     // Animate contact title
     gsap.fromTo(".contact-title",
@@ -38,218 +27,85 @@ const Contact = () => {
       }
     );
 
-    // Animate form inputs from left
-    gsap.fromTo(".form-input",
-      {
-        opacity: 0,
-        x: -50
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".contact-form",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      }
-    );
-
     // Animate social icons
     gsap.fromTo(".social-icon",
       {
         opacity: 0,
-        scale: 0.5
+        scale: 0.5,
+        y: 30
       },
       {
         opacity: 1,
         scale: 1,
-        duration: 0.6,
+        y: 0,
+        duration: 0.8,
         ease: "back.out(1.7)",
-        stagger: 0.1,
+        stagger: 0.15,
         scrollTrigger: {
-          trigger: ".social-links",
+          trigger: ".social-icons",
           start: "top 80%",
           end: "bottom 20%",
           toggleActions: "play none none reverse"
         }
       }
     );
-
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Animate submit button
-    gsap.to(".submit-btn", {
-      scale: 0.95,
-      duration: 0.1,
-      yoyo: true,
-      repeat: 1,
-      ease: "power2.inOut"
-    });
-
-    try {
-      // Send email using EmailJS
-      await emailjs.send(
-        'service_d3tsu1a', // Service ID
-        'template_o96owqs', // Template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        'M0GLBlQXksEuojx3W' // Public Key
-      );
-      
-      alert('Message sent successfully!');
-      
-      // Reset form
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('Failed to send message:', error);
-      alert('Failed to send message. Please try again.');
-    }
-  };
 
   return (
     <section className="contact-section py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto text-center">
         {/* Section title */}
-        <div className="contact-title text-center mb-16">
+        <div className="contact-title mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-            Let's Work Together
+            Get In Touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your ideas into reality? Let's discuss your next project.
+            Let's connect and discuss opportunities together
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Contact form */}
-          <div className="contact-form glass-card p-8 rounded-2xl">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Contact me</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="form-input">
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  required
-                />
-              </div>
-
-              <div className="form-input">
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  required
-                />
-              </div>
-
-              <div className="form-input">
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="glass-card border-primary/20 focus:border-primary bg-transparent"
-                  required
-                />
-              </div>
-
-              <div className="form-input">
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="glass-card border-primary/20 focus:border-primary bg-transparent min-h-[120px]"
-                  required
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="submit-btn w-full neon-button bg-gradient-primary border-0 text-background hover:text-background py-6 text-lg"
-              >
-                <Send className="w-5 h-5 mr-2" />
-                Send Message
-              </Button>
-            </form>
-          </div>
-
-          {/* Contact info and social links */}
-          <div className="space-y-8">
-            {/* Contact info */}
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Get In Touch</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Github className="w-5 h-5 text-primary" />
-                  <a href="https://github.com/Manikanta172003" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                    github.com/Manikanta172003
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Linkedin className="w-5 h-5 text-primary" />
-                  <a href="https://www.linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                    linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <a href="mailto:kambojimanikanta000@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    kambojimanikanta000@gmail.com
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span className="text-muted-foreground">+91 7993590886</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-5 h-5 rounded-full bg-primary animate-pulse-glow" />
-                  <span className="text-muted-foreground">Available for freelance work</span>
-                </div>
-              </div>
+        {/* Social Icons */}
+        <div className="social-icons flex justify-center items-center gap-8 md:gap-12">
+          <a 
+            href="https://github.com/Manikanta172003" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon group"
+          >
+            <div className="glass-card p-6 md:p-8 rounded-2xl hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+              <Github className="w-12 h-12 md:w-16 md:h-16 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
             </div>
+          </a>
 
-          </div>
+          <a 
+            href="https://www.linkedin.com/in/venkata-sai-manikanta-kamboji-864b95210" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon group"
+          >
+            <div className="glass-card p-6 md:p-8 rounded-2xl hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+              <Linkedin className="w-12 h-12 md:w-16 md:h-16 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+            </div>
+          </a>
+
+          <a 
+            href="mailto:kambojimanikanta000@gmail.com"
+            className="social-icon group"
+          >
+            <div className="glass-card p-6 md:p-8 rounded-2xl hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+              <Mail className="w-12 h-12 md:w-16 md:h-16 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+            </div>
+          </a>
+
+          <a 
+            href="tel:+917993590886"
+            className="social-icon group"
+          >
+            <div className="glass-card p-6 md:p-8 rounded-2xl hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+              <Phone className="w-12 h-12 md:w-16 md:h-16 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+            </div>
+          </a>
         </div>
       </div>
     </section>
