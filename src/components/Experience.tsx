@@ -128,15 +128,15 @@ const Experience = () => {
                 </p>
               </div>
 
-              {/* Skills section */}
+              {/* Technologies & Skills Applied */}
               <div className="mt-8 pt-8 border-t border-primary/20">
                 <h5 className="text-lg font-semibold text-foreground mb-4 font-poppins">
-                  Core Focus Areas
+                  Technologies & Skills Applied
                 </h5>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    'Python', 'Data Extraction', 'Automation Workflows',
-                    'Data Operations', 'Operational Excellence', 'Process Optimization'
+                    'Python', 'Excel', 'Metadata Extraction', 
+                    'Data Extraction', 'Automation Workflows', 'Data Operations'
                   ].map((skill) => (
                     <span
                       key={skill}
