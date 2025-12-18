@@ -124,7 +124,7 @@ const Experience = () => {
               {/* Description */}
               <div className="p-6 glass-card rounded-2xl">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Bringing expertise in <span className="text-foreground font-medium">data extraction</span>, <span className="text-foreground font-medium">HVAC specifications</span>, and <span className="text-foreground font-medium">automation workflows</span> to drive operational excellence.
+                  Bringing expertise in <span className="text-foreground font-medium">data extraction</span> and <span className="text-foreground font-medium">automation workflows</span> to drive operational excellence.
                 </p>
               </div>
 
