@@ -88,7 +88,69 @@ const Experience = () => {
         </div>
 
         {/* Experience content */}
-        <div className="experience-content">
+        <div className="experience-content space-y-8">
+          {/* Aquarient Technologies - Current Role */}
+          <div className="experience-card glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden group">
+            {/* Background gradient effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            
+            <div className="relative z-10">
+              {/* Company header */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+                <div>
+                  <div className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-3">
+                    Current Role
+                  </div>
+                  <h3 className="heading-secondary text-3xl md:text-4xl font-bold text-foreground mb-2 font-poppins">
+                    Associate Consultant - Data Ops
+                  </h3>
+                  <div className="flex items-center space-x-2 mb-4">
+                    <TrendingUp className="w-6 h-6 text-primary" />
+                    <span className="text-xl md:text-2xl font-semibold text-primary">
+                      Aquarient Technologies
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Duration and location */}
+                <div className="flex flex-col space-y-2">
+                  <div className="flex items-center space-x-2 text-muted-foreground">
+                    <Calendar className="w-5 h-5 text-secondary" />
+                    <span className="font-medium">Aug 2025 – Present</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="p-6 glass-card rounded-2xl">
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  Bringing expertise in <span className="text-foreground font-medium">data extraction</span>, <span className="text-foreground font-medium">HVAC specifications</span>, and <span className="text-foreground font-medium">automation workflows</span> to drive operational excellence.
+                </p>
+              </div>
+
+              {/* Skills section */}
+              <div className="mt-8 pt-8 border-t border-primary/20">
+                <h5 className="text-lg font-semibold text-foreground mb-4 font-poppins">
+                  Core Focus Areas
+                </h5>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    'Data Extraction', 'HVAC Specifications', 'Automation Workflows',
+                    'Data Operations', 'Operational Excellence', 'Process Optimization'
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-4 py-2 text-sm font-medium bg-gradient-primary/10 text-primary rounded-full border border-primary/30 hover:bg-primary/20 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Shiash Info Solutions - Previous Role */}
           <div className="experience-card glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden group">
             {/* Background gradient effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
