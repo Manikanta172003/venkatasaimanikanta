@@ -135,7 +135,7 @@ const Experience = () => {
                 </h5>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    'Data Extraction', 'HVAC Specifications', 'Automation Workflows',
+                    'Python', 'Data Extraction', 'Automation Workflows',
                     'Data Operations', 'Operational Excellence', 'Process Optimization'
                   ].map((skill) => (
                     <span
